@@ -58,7 +58,14 @@ namespace Exercise_2_20210140026
             Console.WriteLine("");
         }
 
-
+        public void margesort(int[] numbers, int left, int mid, int right)
+        {
+            int[] temp = new int[25];
+            int i, eol, num, pos;
+            eol = (mid - 1);
+            pos = left;
+            num = (right - left + 1);
+        }
 
 
 
