@@ -30,6 +30,17 @@ namespace Exercise_2_20210140026
                 else
                     Console.WriteLine("\nArray dapat mempunyai maksimal 20 elemen.\n");
             }
+            Console.WriteLine("");
+            Console.WriteLine("--------------------");
+            Console.WriteLine("Masukan Elemen Array");
+            Console.WriteLine("--------------------");
+
+            for (int i = 0; i < hartono; i++)  //user memasukan elemen 
+            {
+                Console.Write("<" + (i + 1) + "> ");
+                string s1 = Console.ReadLine();
+                davit[i] = Int32.Parse(s1);
+            }
         }
 
         static void Main(string[] args)
