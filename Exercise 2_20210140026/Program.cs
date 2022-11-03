@@ -10,7 +10,7 @@ namespace Exercise_2_20210140026
     class Program
     {
         //deklarasi array int ukuran 46
-        private int[] davit = new int[46];
+        private int[] davit = new int[28];
 
         //deklarasi variabel in untuk menyimpan data pada array yg di input user
         private int hartono;
@@ -22,10 +22,10 @@ namespace Exercise_2_20210140026
                 Console.Write("Masukan banyaknya elemen pada array: ");
                 string s = Console.ReadLine();
                 hartono = Int32.Parse(s);
-                if (hartono <= 46)
+                if (hartono <= 28)
                     break;
                 else
-                    Console.WriteLine("\nArray dapat mempunyai maksimal 20 elemen.\n");
+                    Console.WriteLine("\nArray dapat mempunyai maksimal 28 elemen.\n");
             }
         }
         public void display()
@@ -107,6 +107,7 @@ namespace Exercise_2_20210140026
             SortMerge(hartono, 0, davit - 1);
             for (int i = 0; i < davit; i++)
                 Console.WriteLine(hartono[i]);
+
 
 
         }
