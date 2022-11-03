@@ -57,6 +57,27 @@ namespace Exercise_2_20210140026
 
         static void Main(string[] args)
         {
+            Console.Write("\n\nMasukan jumlah element: ");
+            int davit = Convert.ToInt32(Console.ReadLine()); //jumlah array yang dimasukan user
+            int[] hartono = new int[davit];
+            for (int i = 0; i < davit; i++) //menampung array yang dimasukan user
+            {
+                Console.Write("\nMasukan [" + (i + 1).ToString() + "] element: ");
+                hartono[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.Write("Element belum tersusun: "); //menampilkan element array oleh user
+            Console.Write("\n");
+            for (int k = 0; k < davit; k++)
+            {
+                Console.Write(hartono[k] + " ");
+                Console.Write(", ");
+                Console.Write("\n");
+            }
+            Console.WriteLine("Element yang telah urut"); //Hasilnya
+            SortMerge(hartono, 0, davit - 1);
+            for (int i = 0; i < davit; i++)
+                Console.Write(hartono[i] + ", ");
+            Console.ReadLine();
         }
     }
 }
