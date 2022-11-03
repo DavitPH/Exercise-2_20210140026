@@ -10,10 +10,10 @@ namespace Exercise_2_20210140026
     class Program
     {
         //deklarasi array int ukuran 28
-        private int[] davit = new int[28];
+        private int[] batas = new int[28];
 
         //deklarasi variabel in untuk menyimpan data pada array yg di input user
-        private int hartono;
+        private int numbers;
 
         //method menerima masukan
 
@@ -24,8 +24,8 @@ namespace Exercise_2_20210140026
             {
                 Console.Write("Masukan banyaknya elemen pada array: ");
                 string s = Console.ReadLine();
-                hartono = Int32.Parse(s);
-                if (hartono <= 46)
+                numbers = Int32.Parse(s);
+                if (numbers <= 28)
                     break;
                 else
                     Console.WriteLine("\nArray dapat mempunyai maksimal 20 elemen.\n");
@@ -35,11 +35,11 @@ namespace Exercise_2_20210140026
             Console.WriteLine("Masukan Elemen Array");
             Console.WriteLine("--------------------");
 
-            for (int i = 0; i < hartono; i++)  //user memasukan elemen 
+            for (int i = 0; i < numbers; i++)  //user memasukan elemen 
             {
                 Console.Write("<" + (i + 1) + "> ");
                 string s1 = Console.ReadLine();
-                davit[i] = Int32.Parse(s1);
+                batas[i] = Int32.Parse(s1);
             }
         }
 
@@ -51,9 +51,9 @@ namespace Exercise_2_20210140026
             Console.WriteLine("Elemental Array yang Telah Tersusun");
             Console.WriteLine("-----------------------------------");
 
-            for (int DH = 0; DH < hartono; DH++)
+            for (int DH = 0; DH < numbers; DH++)
             {
-                Console.WriteLine(davit[DH]);
+                Console.WriteLine(batas[DH]);
             }
             Console.WriteLine("");
         }
@@ -65,6 +65,23 @@ namespace Exercise_2_20210140026
             eol = (mid - 1);
             pos = left;
             num = (right - left + 1);
+
+            while ((left <= eol) && (mid <= right))
+            {
+                if (numbers[left] <= numbers[mid])
+                    temp[pos++] = numbers[left++];
+                else
+                    temp[pos++] = numbers[mid++];
+            }
+            while (left <= eol)
+                temp[pos++] = numbers[left++];
+            while (mid <= right)
+                temp[pos++] = numbers[mid++];
+            for (i = 0; i < num; i++)
+            {
+                numbers[right] = temp[right];
+                right--;
+            }
         }
 
 
