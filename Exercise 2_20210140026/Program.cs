@@ -66,6 +66,8 @@ namespace Exercise_2_20210140026
             pos = left;
             num = (right - left + 1);
 
+
+            //Fungsi Swap
             while ((left <= eol) && (mid <= right))
             {
                 if (numbers[left] <= numbers[mid])
@@ -84,7 +86,17 @@ namespace Exercise_2_20210140026
             }
         }
 
-
+        public void SortMerge(int[] numbers, int left, int right)
+        {//perulangan method marge
+            int mid;
+            if (right > left)
+            {
+                mid = (right + left) / 2;
+                SortMerge(numbers, left, mid);
+                SortMerge(numbers, (mid + 1), right);
+                margesort(numbers, left, (mid + 1), right);
+            }
+        }
 
 
 
