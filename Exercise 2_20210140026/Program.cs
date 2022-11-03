@@ -9,8 +9,39 @@ namespace Exercise_2_20210140026
     //28 : Maksimum Number
     class Program
     {
+        //deklarasi array int ukuran 46
+        private int[] davit = new int[46];
 
-       
+        //deklarasi variabel in untuk menyimpan data pada array yg di input user
+        private int hartono;
+        public void read()
+        {
+            //bentuk perulangan dan menerima data yang disimpan di array
+            while (true)
+            {
+                Console.Write("Masukan banyaknya elemen pada array: ");
+                string s = Console.ReadLine();
+                hartono = Int32.Parse(s);
+                if (hartono <= 46)
+                    break;
+                else
+                    Console.WriteLine("\nArray dapat mempunyai maksimal 20 elemen.\n");
+            }
+        }
+        public void display()
+        {
+            //menampilkan array yang telas disusun
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("Elemental Array yang Telah Tersusun");
+            Console.WriteLine("-----------------------------------");
+
+            for (int DH = 0; DH < hartono; DH++)
+            {
+                Console.WriteLine(davit[DH]);
+            }
+            Console.WriteLine("");
+        }
 
         static public void margesort(int[] numbers, int left, int mid, int right)
         {
@@ -70,14 +101,14 @@ namespace Exercise_2_20210140026
             for (int k = 0; k < davit; k++)
             {
                 Console.Write(hartono[k] + " ");
-                Console.Write(", ");
                 Console.Write("\n");
             }
-            Console.WriteLine("Element yang telah urut"); //Hasilnya
+            Console.WriteLine("Element yang telah tersusun"); //Hasilnya
             SortMerge(hartono, 0, davit - 1);
             for (int i = 0; i < davit; i++)
-                Console.Write(hartono[i] + ", ");
-            Console.ReadLine();
+                Console.WriteLine(hartono[i]);
+
+
         }
     }
 }
