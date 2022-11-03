@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Exercise_2_20210140026
 {
-    //28
+    //28 : Maksimum Number
     class Program
     {
-        //deklarasi array int ukuran 26
-        private int[] davit = new int[26];
+        //deklarasi array int ukuran 28
+        private int[] davit = new int[28];
 
         //deklarasi variabel in untuk menyimpan data pada array yg di input user
         private int hartono;
@@ -57,6 +57,10 @@ namespace Exercise_2_20210140026
             }
             Console.WriteLine("");
         }
+
+
+
+
 
 
 
