@@ -43,6 +43,23 @@ namespace Exercise_2_20210140026
             }
         }
 
+        public void display()
+        {
+            //menampilkan array yang telas disusun
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("Elemental Array yang Telah Tersusun");
+            Console.WriteLine("-----------------------------------");
+
+            for (int DH = 0; DH < hartono; DH++)
+            {
+                Console.WriteLine(davit[DH]);
+            }
+            Console.WriteLine("");
+        }
+
+
+
         static void Main(string[] args)
         {
         }
