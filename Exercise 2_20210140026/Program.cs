@@ -17,6 +17,20 @@ namespace Exercise_2_20210140026
 
         //method menerima masukan
 
+        public void read()
+        {
+            //bentuk perulangan dan menerima data yang disimpan di array
+            while (true)
+            {
+                Console.Write("Masukan banyaknya elemen pada array: ");
+                string s = Console.ReadLine();
+                hartono = Int32.Parse(s);
+                if (hartono <= 46)
+                    break;
+                else
+                    Console.WriteLine("\nArray dapat mempunyai maksimal 20 elemen.\n");
+            }
+        }
 
         static void Main(string[] args)
         {
